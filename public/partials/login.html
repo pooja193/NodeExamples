@@ -1,0 +1,33 @@
+<div class="jumbotron">
+  <form class="form-signin">
+    <h2 class="form-signin-heading">User Details</h2>
+	
+    <label for="name" class="sr-only">Name</label>
+    <input type="text" id="txt_name" class="form-control" placeholder="Name" ng-model="user.name" >
+    <label for="address" class="sr-only">Address</label>
+     <input type="text" id="txt_address" class="form-control" placeholder="Address" ng-model="user.address">
+	 <label for="city" class="sr-only">City</label>
+     <input type="text" id="txt_address" class="form-control" placeholder="City" ng-model="user.city">
+	  <label for="email" class="sr-only">Email ID</label>
+     <input type="text" id="txt_email" class="form-control" placeholder="Email ID" ng-model="user.email">
+	  <label for="address" class="sr-only">Contact No</label>
+     <input type="text" id="txt_contact" class="form-control" placeholder="Contact No" ng-model="user.contact">
+	
+	
+    <!-- <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div> -->
+    <button type="submit" ng-click="addUser(user)">SAVE</button>
+	
+  </form>
+  <table>
+	<tr>
+	<td>{{name}} </td>
+	<td>{{address}}</td>
+	<td>{{email}}</td>
+	<td>{{contact}}</td>
+	</tr>
+	</table>
+</div> <!-- /container -->

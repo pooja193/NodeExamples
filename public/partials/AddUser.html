@@ -1,0 +1,35 @@
+<div class="jumbotron" ng-init="displayData()">
+  <form class="form-signin">
+    <h2 class="form-signin-heading">User Details</h2>
+	
+    <label for="name" class="sr-only">Name</label>
+    <input type="text" id="txt_name" class="form-control" placeholder="Name" ng-model="user.name" >
+    <label for="address" class="sr-only">Address</label>
+     <input type="text" id="txt_address" class="form-control" placeholder="Address" ng-model="user.address" >
+	 <label for="city" class="sr-only">City</label>
+     <input type="text" id="txt_address" class="form-control" placeholder="City" ng-model="user.city">
+	  <label for="email" class="sr-only">Email ID</label>
+     <input type="text" id="txt_email" class="form-control" placeholder="Email ID" ng-model="user.email">
+	  <label for="address" class="sr-only">Contact No</label>
+     <input type="text" id="txt_contact" class="form-control" placeholder="Contact No" ng-model="user.contact">
+	
+
+    <button  class="btn btn-block btn-primary btn-lg" type="submit" ng-click="addUser(user)">SAVE</button>
+	
+  </form>
+  <br /><br />
+<table border="1" class="table table-borederd">
+<tr><th>Name</th>
+<th>Address</th>
+<th>City</th>
+<th>Email-ID</th>
+<th>Contact</th></tr>
+
+<tr ng-repeat="x in data" ng-click="displayUser(x)">
+<td>{{x.name}}</td>
+<td>{{x.address}}</td>
+<td>{{x.city}}</td>
+<td>{{x.email}}</td>
+<td>{{x.contact}}</td>
+</tr></table>  
+</div> <!-- /container -->
