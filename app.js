@@ -48,6 +48,17 @@ console.log('Details saved Successfully');
 
 });
 
+apiRoutes.post('/update/:userdata' , function (req, res, next) {
+	var user = JSON.parse(req.params.userdata);
+ 
+  var query = "update  user_details set address='"+ user.address+"',city='"+ user.city+"',email='"+ user.email+"',contact='"+ user.contact+"' where name= '"+ user.name+"' ";
+console.log('Details saved Successfully');
+  connection.query(query, function(err, rows, fields) {
+    if (err) throw err; 
+  }); 
+
+});
+
 
 apiRoutes.post('/display/' , function (req, res, next) {
  var query1 = "select * from  user_details ";
